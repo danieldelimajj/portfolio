@@ -1,10 +1,10 @@
-import styles from '../Footer/Footer.module.css';
+import { FooterStyles } from "./Footer.styles";
 
 function Footer() {
     return(
-        <footer className={styles.footer}>
+        <FooterStyles>
             <span>Desenvolvido por Daniel Lima &copy; 2024</span>
-        </footer>
+        </FooterStyles>
     );
 }
 

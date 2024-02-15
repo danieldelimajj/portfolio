@@ -1,16 +1,23 @@
-import styles from './Header.module.css'
+import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage } from './Header.style'
+import ImageLogo from '../../../src/mylogo.svg'
+
 
 function Header() {
     return (
-        <header className={styles.header}>
-            <span>danielLima.dev</span>
-            <nav>
-                <a href="">Home</a>
-                <a href="">Sobre</a>
-                <a href="">Projetos</a>
-                <a href="">Contatos</a>
-            </nav>
-        </header>
+        <HeaderStyled>
+            <figure>
+                <LinkHeader to="/Portfolio">
+                <MyLogoImage src={ImageLogo} alt="Minha logo"/>
+                </LinkHeader>
+            </figure>
+            
+            <NavStyled>
+                <LinkHeader to="/Portfolio">Home</LinkHeader>
+                <LinkHeader to="/About">Sobre</LinkHeader>
+                <LinkHeader to="/Projects">Projetos</LinkHeader>
+                <LinkHeader to="/Contacts">Contatos</LinkHeader>
+            </NavStyled>
+        </HeaderStyled>
     )
 }
 

@@ -1,29 +1,31 @@
-/*css da page home */
+import styled from "styled-components";
 
-.container {
+
+export const SectionContainer = styled.section `
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
 
-.container img {
-    height: 300px;
-}
+`
 
-.container p {
+export const ContainerImg = styled.img `
+    height: 300px;    
+
+`
+
+export const ContainerParagraph = styled.p `
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
+`
 
-.container span {
+export const ContainerSpan = styled.span`
     color: var(--secondary);
-}
+` 
 
-.btn {
+export const BtnHome = styled.button `
     width: 250px;
     height: 50px;
     font-size: 1.125rem;
@@ -31,14 +33,13 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.btn-home {
     background-color: var(--secondary);
     color: var(--white);
-    
-}
 
-.btn-home:hover {
-   background-color: var(--tertiary);
-}
+    &:hover {
+        background-color: var(--tertiary);
+    }
+
+`
+
+
