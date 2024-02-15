@@ -1,5 +1,8 @@
-import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage } from './Header.style'
-import ImageLogo from '../../../src/mylogo.svg'
+import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage, BarsIcon } from './Header.style'
+import ImageLogo from '../../../src/assets/mylogo.svg'
+import BarsImage from '../../assets/bars-solid.svg'
+
+
 
 
 function Header() {
@@ -17,6 +20,12 @@ function Header() {
                 <LinkHeader to="/Projects">Projetos</LinkHeader>
                 <LinkHeader to="/Contacts">Contatos</LinkHeader>
             </NavStyled>
+
+            <figure>
+               <BarsIcon src={BarsImage} alt='Bars icon'> 
+               </BarsIcon>
+            </figure>
+
         </HeaderStyled>
     )
 }

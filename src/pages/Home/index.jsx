@@ -1,6 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import HomeImage from '../../../src/home-image.svg'
+import HomeImage from '../../../src/assets/home-image.svg'
 import { BtnHome, ContainerImg, ContainerParagraph, ContainerSpan, SectionContainer } from './Home.style'
 
 

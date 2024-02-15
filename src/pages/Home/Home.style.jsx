@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import breakpoints from "/src/styles-breakpoints/breakpoints.jsx"
 
 
 export const SectionContainer = styled.section `
     width: 100%;
-    min-height: 100vh;
+    min-height: 95.2vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media ${breakpoints.mediumsize} {
+        flex-direction: column;
+    }
 
 `
 
@@ -19,6 +24,7 @@ export const ContainerParagraph = styled.p `
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding-top: 1rem;
 `
 
 export const ContainerSpan = styled.span`
