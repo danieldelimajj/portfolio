@@ -1,20 +1,27 @@
-import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage, BarsIcon } from './Header.style'
+import { useState } from 'react'
+import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage, BarsIcon} from './Header.style'
 import ImageLogo from '../../../src/assets/mylogo.svg'
 import BarsImage from '../../assets/bars-solid.svg'
-
-
+import CloseImage from '../../assets/x-solid.svg'
 
 
 function Header() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+
+    };
+
     return (
         <HeaderStyled>
             <figure>
                 <LinkHeader to="/Portfolio">
-                <MyLogoImage src={ImageLogo} alt="Minha logo"/>
+                    <MyLogoImage src={ImageLogo} alt="Minha logo" />
                 </LinkHeader>
             </figure>
-            
-            <NavStyled>
+
+            <NavStyled isOpen={isSidebarOpen}>
                 <LinkHeader to="/Portfolio">Home</LinkHeader>
                 <LinkHeader to="/About">Sobre</LinkHeader>
                 <LinkHeader to="/Projects">Projetos</LinkHeader>
@@ -22,12 +29,16 @@ function Header() {
             </NavStyled>
 
             <figure>
-               <BarsIcon src={BarsImage} alt='Bars icon'> 
-               </BarsIcon>
+                <BarsIcon
+                     src={isSidebarOpen ? CloseImage : BarsImage}
+                     alt={isSidebarOpen ? 'Close icon' : 'Bars Icon'} 
+                     onClick={toggleSidebar} 
+                    />
             </figure>
 
-        </HeaderStyled>
-    )
-}
+            
 
+        </HeaderStyled>
+    )}
+    
 export default Header
