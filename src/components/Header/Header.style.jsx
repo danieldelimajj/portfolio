@@ -35,14 +35,14 @@ export const NavStyled = styled.nav`
     @media ${breakpoints.mediumsize} {
         background-color: #3D8884;
         flex-direction: column;
-
         display: ${props => (props.isOpen ? 'flex' : 'none')};
         position: fixed;
         align-items: center;
         top: 60px;
-        left: ${props => (props.isOpen ? '0' : '0')}; 
+        left: 0px;
         width: 100vw; 
         height: 100vh;
+        padding: 50px;
     }
 `;
 
@@ -59,29 +59,27 @@ export const LinkHeader = styled(Link)`
         transition: ease-in .2s;
     }
     
-    @media ${breakpoints.mediumsize} {
-        align-items: center;
-        font-size: 4rem;
-        font-weight: 500;
+    @media ${breakpoints.smallsize} { //until 480px
+        font-size: 3rem;
         padding-bottom: 5rem;
+        font-weight: bold;
+        
     }
 
     &:hover {
         color: #3D8884;
     }
-
 `
 
 export const BarsIcon = styled.img`
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(238deg) brightness(100%) contrast(100%); //setting to change the color of bars to white
-
     width: 30px;
     display: none;
     cursor: pointer;
-
+    
     @media ${breakpoints.mediumsize} {
         display: block; //max-width: 780px
     }
     
 `
+
 

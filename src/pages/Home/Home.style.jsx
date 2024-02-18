@@ -18,6 +18,10 @@ export const SectionContainer = styled.section `
 export const ContainerImg = styled.img `
     height: 300px;    
 
+
+    @media ${breakpoints.smallsize} {
+        width: 250px;
+    }
 `
 
 export const ContainerParagraph = styled.p `
@@ -25,6 +29,10 @@ export const ContainerParagraph = styled.p `
     font-weight: bold;
     margin-bottom: 1rem;
     padding-top: 1rem;
+
+    @media ${breakpoints.smallsize} {
+        font-size: 2rem;
+    }
 `
 
 export const ContainerSpan = styled.span`
@@ -44,6 +52,11 @@ export const BtnHome = styled.button `
 
     &:hover {
         background-color: var(--tertiary);
+    }
+
+    @media ${breakpoints.smallsize} {
+        width: 140px;
+        height: 40px;
     }
 
 `

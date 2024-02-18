@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { HeaderStyled, NavStyled, LinkHeader, MyLogoImage, BarsIcon} from './Header.style'
 import ImageLogo from '../../../src/assets/mylogo.svg'
-import BarsImage from '../../assets/bars-solid.svg'
-import CloseImage from '../../assets/x-solid.svg'
+import BarsImage from '../../assets/bars-white.svg'
+import CloseImage from '../../assets/close-icon.svg'
 
 
 function Header() {
@@ -34,6 +34,8 @@ function Header() {
                      alt={isSidebarOpen ? 'Close icon' : 'Bars Icon'} 
                      onClick={toggleSidebar} 
                     />
+
+                
             </figure>
 
             
