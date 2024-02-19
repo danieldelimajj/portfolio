@@ -97,8 +97,9 @@ Error generating stack: `+o.message+`
         top: 60px;
         left: 0px;
         width: 100vw; 
-        height: 90vh;
+        height: 100vh;
         padding-bottom: 2rem;
+        text-transform: uppercase;
 
     }
 `,lr=De(Sd)`
@@ -106,7 +107,7 @@ Error generating stack: `+o.message+`
     padding-right: 1.5rem;
     font-weight: bold;
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 1.325rem;
     padding-top: 1rem;
 
     &:hover {
