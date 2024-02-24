@@ -5,21 +5,18 @@ import BarsImage from '../../assets/bars-white.svg'
 import CloseImage from '../../assets/close-icon.svg'
 
 
-
 function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
-
     };
+
 
     return (
         <HeaderStyled>
             <figure>
-                <LinkHeader to="/Portfolio">
                     <MyLogoImage src={ImageLogo} alt="Minha logo" />
-                </LinkHeader>
             </figure>
 
             <NavStyled isOpen={isSidebarOpen}>

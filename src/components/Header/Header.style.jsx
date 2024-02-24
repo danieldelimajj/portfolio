@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import breakpoints from '/src/styles-breakpoints/breakpoints.jsx'
 
 export const MyLogoImage = styled.img`
-    width: 40px;
-    margin-top: 5px;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 36px;    
 `
 
 //Header styles using Styled-components
@@ -18,17 +18,18 @@ export const HeaderStyled = styled.header`
     background-color: var(--primary);
     color: var(--secondary);
     position: fixed;
+    border-bottom: 1px solid var(--white);
+    
 
     @media ${breakpoints.mediumsize} {
         justify-content: space-between;
         padding: 20px; 
-        background-color: #000000;
+        
     }
 `
 
 //Nav styles using Styled-components
 export const NavStyled = styled.nav`
-    
     @media ${breakpoints.mediumsize} {
         background-color: var(--primary);
         flex-direction: column;
@@ -41,9 +42,8 @@ export const NavStyled = styled.nav`
         left: 0px;
         width: 100vw; 
         height: 100%;
-        padding-bottom: 2rem;
+        padding-bottom: 8rem;
         text-transform: uppercase;
-        
     }
 `;
 
@@ -51,27 +51,42 @@ export const NavStyled = styled.nav`
 //Link (react-router-dom) using Styled-components 
 export const LinkHeader = styled(Link)`
     text-decoration: none;
-    padding-right: 1.5rem;
+    text-align: center;
     font-weight: bold;
+    padding-right: 1.5rem;
     color: var(--white);
     font-size: 1.325rem;
-    padding-top: 1rem;
-
-    &:hover {
-        color: var(--tertiary);
-        transition: ease-in .3s;
-        
-    }
+    opacity: 95%;
     
-    @media ${breakpoints.smallsize} { //max-width: 480px
-        font-size: 1.8rem;
-        font-weight: bold;
+    &:hover {
+        color: var(--secondary);
+    }
+
+    @media ${breakpoints.mediumsize} { //max-width: 768px
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--white);
+        padding: 0px 15px;
+        border-radius: 7px;
+        border: 1px solid var(--white);
+        
+
+        &:hover {
+            border: 1px solid var(--secondary);
+            color: var(--white);
+            transition: ease-out .2s;
+            
+        }
+
+        
+        
     }
 `
 export const BarsIcon = styled.img`
     width: 30px;
     display: none;
     cursor: pointer;
+
     
     @media ${breakpoints.mediumsize} {
         display: block; //max-width: 780px

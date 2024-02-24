@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import breakpoints from '../../styles-breakpoints/breakpoints';
 
-export const FooterStyles = styled.footer `
+export const FooterStyles = styled.footer`
     width: 100%;
     height: 50px;
     background-color: var(--primary);
@@ -11,6 +11,8 @@ export const FooterStyles = styled.footer `
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid var(--white);
+    
 
     @media ${breakpoints.smallsize} {
         font-size: 0.9rem;
@@ -18,5 +20,5 @@ export const FooterStyles = styled.footer `
         
     }
 `
-    
-    
+
+
