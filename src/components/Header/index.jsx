@@ -34,6 +34,7 @@ function Header() {
                      onClick={toggleSidebar} 
                     />
             </figure>
+            
         </HeaderStyled>
     )}
     
